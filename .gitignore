@@ -1,0 +1,26 @@
+$ cat .gitignore
+#Whitelist
+/*
+/config/worldedit/schematics
+/scripts/.zsrc
+
+#Folders
+!/config/
+!/patchouli_books
+!/resources
+!/scripts
+!/structures
+
+#Files
+!/.gitignore
+!/README.md
+!/PlanAndProgress.md
+scripts
+
+#ModWatcher
+!ModWatcher
+MinecraftModWatcher.exe
+ModWatcher/export.zip
+ModWatcher/config.json
+ModWatcher/stage/
+ModWatcher/HowToExpertizeYourself*.zip

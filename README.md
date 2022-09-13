@@ -21,3 +21,15 @@ ___________
 想到这一点不禁让我有点...
 
 好吧，我想玩完这个整合包后，你就会明白我的意思了。
+________________
+# 如何进行开发
+## 准备步骤
+将 repo 直接 clone 到 MultiMC 或 PolyMC 的 instances 文件夹，并将 [ModWatcher](https://github.com/baka-gourd/MinecraftModWatcher) 程序放进 .minecraft 文件夹。运行一次程序。
+## 填写api key
+打开.minecraft/ModWatcher/文件夹，在config.json中填写官方 [api key](https://console.curseforge.com/#/api-keys)。
+## 建立实例
+再次运行程序，ModWatcher便会从CF下载所有缺失的模组，整合便能从启动器运行。代理方面，程序会自动检测并使用系统代理。
+## 提交模组变更
+在终端里运行 `.\MinecraftModWatcher.exe --force-regenerate` 。一次不行试多几次。
+## 导出CurseForge格式整合包
+在终端里运行 `.\MinecraftModWatcher.exe --export`，整合包文件 `export.zip` 会生成在 `.minecraft\ModWatcher\` 文件夹。
