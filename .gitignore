@@ -2,7 +2,6 @@ $ cat .gitignore
 #Whitelist
 /*
 /config/worldedit/schematics
-/scripts/.zsrc
 
 #Folders
 !/config/
@@ -15,7 +14,6 @@ $ cat .gitignore
 !/.gitignore
 !/README.md
 !/PlanAndProgress.md
-scripts
 
 #ModWatcher
 !ModWatcher
