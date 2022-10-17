@@ -76,7 +76,7 @@ for ore in ores {
     mods.orestages.OreStages.addReplacement("ore",ore);
 }
 
-var ores as IItemStack[] = [
+var netherores as IItemStack[] = [
 <tconstruct:ore>,
 <tconstruct:ore:1>,
 <draconicevolution:draconium_ore:1>,
@@ -87,11 +87,11 @@ var ores as IItemStack[] = [
 <techreborn:ore:7>
 ];
 
-for ore in ores{
-    mods.orestages.OreStages.addReplacement("ore",ore,<minecraft:netherrack>);
+for netherore in netherores{
+    mods.orestages.OreStages.addReplacement("ore",netherore,<minecraft:netherrack>);
 }
 
-var ores as IItemStack[] = [
+var endores as IItemStack[] = [
 <draconicevolution:draconium_ore:2>,
 <rftools:dimensional_shard_ore:2>,
 <techreborn:ore:8>,
@@ -101,8 +101,8 @@ var ores as IItemStack[] = [
 <techreborn:ore:11>
 ];
 
-for ore in ores{
-    mods.orestages.OreStages.addReplacement("ore",ore,<minecraft:end_stone>);
+for endore in endores{
+    mods.orestages.OreStages.addReplacement("ore",endore,<minecraft:end_stone>);
 }
 
 
