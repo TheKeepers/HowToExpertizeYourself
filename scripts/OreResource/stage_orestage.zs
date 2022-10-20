@@ -1,108 +1,52 @@
 #priority 2147483646
 
-import crafttweaker.oredict.IOreDict;
-import crafttweaker.item.IItemDefinition;
-import crafttweaker.item.IItemStack;
+import crafttweaker.item.IIngredient;
+import mods.orestages.OreStages;
 
-var ores as IItemStack[] =[
-<actuallyadditions:block_misc:3>,
-<appliedenergistics2:quartz_ore>,
-<appliedenergistics2:charged_quartz_ore>,
-<astralsorcery:blockcustomore>,
-<astralsorcery:blockcustomore:1>,
-<embers:ore_copper>,
-<embers:ore_lead>,
-<embers:ore_silver>,
-<embers:ore_quartz>,
-<embers:ore_aluminum>,
-<embers:ore_nickel>,
-<embers:ore_tin>,
-<forestry:resources>,
-<forestry:resources:1>,
-<forestry:resources:2>,
-<galacticraftcore:basic_block_core:5>,
-<galacticraftcore:basic_block_core:6>,
-<galacticraftcore:basic_block_core:7>,
-<galacticraftcore:basic_block_core:8>,
-<iceandfire:silver_ore>,
-<iceandfire:sapphire_ore>,
-<immersiveengineering:ore>,
-<immersiveengineering:ore:1>,
-<immersiveengineering:ore:2>,
-<immersiveengineering:ore:3>,
-<immersiveengineering:ore:4>,
-<immersiveengineering:ore:5>,
-<ic2:resource:1>,
-<ic2:resource:2>,
-<ic2:resource:3>,
-<ic2:resource:4>,
-<mekanism:oreblock>,
-<mekanism:oreblock:1>,
-<mekanism:oreblock:2>,
-<nuclearcraft:ore>,
-<nuclearcraft:ore:1>,
-<nuclearcraft:ore:2>,
-<nuclearcraft:ore:3>,
-<nuclearcraft:ore:4>,
-<nuclearcraft:ore:5>,
-<nuclearcraft:ore:6>,
-<nuclearcraft:ore:7>,
-<rftools:dimensional_shard_ore>,
-<simpleores:copper_ore>,
-<simpleores:tin_ore>,
-<simpleores:mythril_ore>,
-<simpleores:adamantium_ore>,
-<techreborn:ore>,
-<techreborn:ore:1>,
-<techreborn:ore:2>,
-<techreborn:ore:3>,
-<techreborn:ore:4>,
-<techreborn:ore:12>,
-<techreborn:ore:13>,
-<techreborn:ore2>,
-<techreborn:ore2:1>,
-<thermalfoundation:ore>,
-<thermalfoundation:ore:1>,
-<thermalfoundation:ore:2>,
-<thermalfoundation:ore:3>,
-<thermalfoundation:ore:4>,
-<thermalfoundation:ore:5>,
-<thermalfoundation:ore:6>,
-<thermalfoundation:ore:7>,
-<thermalfoundation:ore:8>
+var ores as IIngredient[] = [
+    <astralsorcery:blockcustomore>, // Rock Crystal Ore
+    <rftools:dimensional_shard_ore>, // Overworld Dimensional Shard
+
+    <ore:oreQuartzBlack>, <ore:oreCertusQuartz>, <ore:oreAstralStarmetal>,
+    <ore:oreCopper>, <ore:oreLead>, <ore:oreSilver>, <ore:oreQuartz>,
+    <ore:oreAluminum>, <ore:oreNickel>, <ore:oreTin>, <ore:oreApatite>,
+    <ore:oreSilicon>, <ore:oreSapphire>, <ore:oreUranium>, <ore:oreOsmium>,
+    <ore:oreBoron>, <ore:oreThorium>, <ore:oreLithium>, <ore:oreMagnesium>,
+    <ore:oreMythril>, <ore:oreAdamantium>, <ore:oreIridium>, <ore:oreBauxite>,
+    <ore:oreRuby>, <ore:oreMithril>, <ore:orePlatinum>
+];
+
+var netherores as IIngredient[] = [
+    <draconicevolution:draconium_ore:1>, // Nether Draconium Ore
+    <rftools:dimensional_shard_ore:1>, // Nether Dimensional Shard
+
+    <ore:oreCobalt>,
+    <ore:oreArdite>,
+    <ore:oreOnyx>,
+    <ore:orePyrite>,
+    <ore:oreCinnabar>,
+    <ore:oreSphalerite>
+];
+
+var endores as IIngredient[] = [
+    <draconicevolution:draconium_ore:2>, // Ender Draconium Ore
+    <rftools:dimensional_shard_ore:2>, // Ender Dimensional Shard
+
+    <ore:oreTungsten>,
+    <ore:oreSheldonite>,
+    <ore:oreClathrateEnder>,
+    <ore:orePeridot>,
+    <ore:oreSodalite>
 ];
 
 for ore in ores {
-    mods.orestages.OreStages.addReplacement("ore",ore);
+    OreStages.addReplacement("ore", ore);
 }
 
-var netherores as IItemStack[] = [
-<tconstruct:ore>,
-<tconstruct:ore:1>,
-<draconicevolution:draconium_ore:1>,
-<rftools:dimensional_shard_ore:1>,
-<simpleores:onyx_ore>,
-<techreborn:ore:5>,
-<techreborn:ore:6>,
-<techreborn:ore:7>
-];
-
-for netherore in netherores{
-    mods.orestages.OreStages.addReplacement("ore",netherore,<minecraft:netherrack>);
+for netherore in netherores {
+    OreStages.addReplacement("ore", netherore, <minecraft:netherrack>);
 }
 
-var endores as IItemStack[] = [
-<draconicevolution:draconium_ore:2>,
-<rftools:dimensional_shard_ore:2>,
-<techreborn:ore:8>,
-<techreborn:ore:9>,
-<thermalfoundation:ore_fluid:4>,
-<techreborn:ore:10>,
-<techreborn:ore:11>
-];
-
-for endore in endores{
-    mods.orestages.OreStages.addReplacement("ore",endore,<minecraft:end_stone>);
+for endore in endores {
+    OreStages.addReplacement("ore", endore, <minecraft:end_stone>);
 }
-
-
